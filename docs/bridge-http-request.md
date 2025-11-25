@@ -95,7 +95,7 @@ submission, should both belong to Yii or both belong to Laravel.
 
 In case you are using both `\Yii2tech\Illuminate\Yii\Web\Request` and `\Yii2tech\Illuminate\Yii\Web\Response`, you can
 utilize `\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken` middleware to handle CSRF protection for Yii requests.
-To be able doing so, enable `\Yii2tech\Illuminate\Yii\Web\Request::$useIlluminateCsrfValildation` and set `\yii\web\Request::$csrfParam`
+To be able doing so, enable `\Yii2tech\Illuminate\Yii\Web\Request::$useIlluminateCsrfValidation` and set `\yii\web\Request::$csrfParam`
 to '_token'. Application configuration example:
 
 ```php
@@ -105,7 +105,7 @@ return [
     'components' => [
         'request' => [
             'class' => Yii2tech\Illuminate\Yii\Web\Request::class,
-            'useIlluminateCsrfValildation' => false,
+            'useIlluminateCsrfValidation' => false,
             'csrfParam' => '_token',
         ],
         'response' => Yii2tech\Illuminate\Yii\Web\Response::class,
